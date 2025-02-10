@@ -2,38 +2,6 @@ import React, { useState, useEffect } from "react";
 import styles from "./Home.module.css";
 import StarIcon from "@mui/icons-material/Star";
 
-function CryptoCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
-  return (
-    <div
-      style={{
-        position: "fixed",
-        left: position.x,
-        top: position.y,
-        width: "20px",
-        height: "20px",
-        backgroundColor: "rgba(0, 255, 255, 0.7)",
-        borderRadius: "50%",
-        boxShadow: "0 0 10px cyan, 0 0 20px cyan",
-        transform: "translate(-50%, -50%) scale(1)",
-        animation: "pulse 1s infinite alternate",
-        pointerEvents: "none",
-        zIndex: 9999,
-      }}
-    />
-  );
-}
-
 export default function Home() {
   return (
     <>
@@ -68,6 +36,7 @@ export default function Home() {
           />
         </div>
       </div>
+
       <div className={`${styles.market} container`}>
         <div className={`${styles.marketCards}`}>
           <div className={`${styles.marketCard}`}>
@@ -90,6 +59,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className={`${styles.learn} container`}>
         <div className={`${styles.learnHead}`}>
           <h1>Learning is Earning</h1>
@@ -188,17 +158,30 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className={`${styles.analys} container`}>
         <div className={`${styles.analysLeft}`}>
-          <video width="600" height="340" autoPlay loop muted controls>
+          <video
+            width="500"
+            height="30"
+            autoPlay
+            loop
+            muted
+            className={`${styles.vid}`}
+          >
             <source src="crypto.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className={`${styles.analysRight}`}></div>
+        <div className={`${styles.analysRight}`}>
+          <h1>Get In-Depth Profit & Loss Analysis</h1>
+          <p>
+            Connect your wallet to get 24h, daily, weekly and cumulative Profit
+            & Loss analysis. Level up your crypto investing strategy.
+          </p>
+          <button>Connect Portfolio</button>
+        </div>
       </div>
-
-      <CryptoCursor />
     </>
   );
 }

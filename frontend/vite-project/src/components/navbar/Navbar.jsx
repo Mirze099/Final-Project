@@ -1,12 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import EmailIcon from "@mui/icons-material/Email";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function Navbar() {
   return (
@@ -27,6 +21,11 @@ export default function Navbar() {
                 Favorites
               </NavLink>
             </li>
+            <li>
+              <NavLink to={"contact"} className={`${styles.navNav}`}>
+                Contact
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className={`${styles.navRight}`}>
@@ -36,6 +35,15 @@ export default function Navbar() {
           <NavLink to={"register"} className={`${styles.navNavss}`}>
             Register
           </NavLink>
+        </div>
+      </div>
+      <div className="slider-container">
+        <div className="slider">
+          <span className="currency">USD/AZN: 1.70</span>
+          <span className="currency">EUR/AZN: 1.85</span>
+          <span className="currency">GBP/AZN: 2.15</span>
+          <span className="currency">RUB/AZN: 0.018</span>
+          <span className="currency">TRY/AZN: 0.057</span>
         </div>
       </div>
     </div>

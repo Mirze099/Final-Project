@@ -1,3 +1,4 @@
+import Contact from "../pages/user/contact/Contact";
 import Favorites from "../pages/user/favorites/Favorites";
 import Home from "../pages/user/home/Home";
 import Login from "../pages/user/login/Login";
@@ -26,6 +27,10 @@ const ROUTES = [
       {
         path: "register",
         element: <Register />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
       {
         path: "*",
