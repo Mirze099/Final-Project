@@ -39,9 +39,8 @@ body {
 }
 
 .heroInfo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -211,5 +210,104 @@ body {
     &:hover {
       background-color: #5cbf0d;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    gap: 50px;
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .heroParag {
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroInfo {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .heroParag h1 {
+    font-size: 40px;
+  }
+
+  .heroParag p {
+    font-size: 20px;
+  }
+
+  .marketCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .learnHead {
+    align-items: center;
+    text-align: center;
+  }
+
+  .learnCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+
+  .learnCard {
+    align-items: center;
+    text-align: center;
+  }
+
+  .analys {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .analysRight {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .heroParag h1 {
+    font-size: 50px;
+  }
+
+  .heroParag p {
+    font-size: 25px;
+  }
+
+  .marketCards,
+  .learnCards {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 30px;
+    margin: 20px;
+  }
+
+  .analys {
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .heroParag h1 {
+    font-size: 70px;
+  }
+
+  .heroParag p {
+    font-size: 35px;
+  }
+
+  .marketCards,
+  .learnCards {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px;
+  }
+
+  .analys {
+    gap: 80px;
   }
 }

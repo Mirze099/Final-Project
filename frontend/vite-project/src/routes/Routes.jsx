@@ -1,11 +1,20 @@
 import Contact from "../pages/user/contact/Contact";
-import Favorites from "../pages/user/favorites/Favorites";
 import Home from "../pages/user/home/Home";
-import Login from "../pages/user/login/Login";
 import NotFound from "../pages/user/notfound/NotFound";
-import Register from "../pages/user/register/Register";
 import UserRoot from "../pages/user/UserRoot";
 import React from "react";
+import { SignUp } from "@clerk/clerk-react";
+import Login from "../pages/user/login/Login";
+import Coin from "../pages/user/coin/Coin";
+import Trending from "../pages/user/trending/Trending";
+import Saved from "../pages/user/saved/Saved";
+import Crypto from "../pages/user/crypto/Crypto";
+import AdminRoot from "../pages/admin/AdminRoot";
+import Dashboard from "../pages/admin/dashboard/Dashboard";
+import AdminCoin from "../pages/admin/admincoin/AdminCoin";
+import AdminDetail from "../pages/admin/admindetail/AdminDetail";
+import AddCoin from "../pages/admin/addcoin/AddCoin";
+import EditCoins from "../pages/admin/editcoins/EditCoins";
 
 const ROUTES = [
   {
@@ -17,16 +26,28 @@ const ROUTES = [
         element: <Home />,
       },
       {
-        path: "favorites",
-        element: <Favorites />,
-      },
-      {
         path: "login",
         element: <Login />,
       },
       {
         path: "register",
-        element: <Register />,
+        element: <SignUp />,
+      },
+      {
+        path: "coin",
+        element: <Coin />,
+      },
+      {
+        path: "trending",
+        element: <Trending />,
+      },
+      {
+        path: "saved",
+        element: <Saved />,
+      },
+      {
+        path: "crypto",
+        element: <Crypto />,
       },
       {
         path: "contact",
@@ -35,6 +56,32 @@ const ROUTES = [
       {
         path: "*",
         element: <NotFound />,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminRoot />,
+    children: [
+      {
+        path: "",
+        element: <Dashboard />,
+      },
+      {
+        path: "admincoin",
+        element: <AdminCoin />,
+      },
+      {
+        path: "admincoin/:id",
+        element: <AdminDetail />,
+      },
+      {
+        path: "addcoin",
+        element: <AddCoin />,
+      },
+      {
+        path: "admincoin/editcoin/:id",
+        element: <EditCoins />,
       },
     ],
   },

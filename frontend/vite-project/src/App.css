@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +8,7 @@
 }
 
 .active {
-  color: #008075 !important;
+  color: #ffffff !important;
 }
 
 .container {
@@ -225,13 +227,97 @@ span {
   margin-right: 40px;
   font-size: 20px;
   color: #15ffec;
+  span {
+    color: red;
+  }
 }
 
 @keyframes slide {
   from {
-    transform: translateX(180%);
+    transform: translateX(90%);
   }
   to {
     transform: translateX(-100%);
+  }
+}
+
+.nav {
+  margin-top: 100px;
+  padding: 1rem;
+  margin-bottom: 100px;
+}
+
+.sa {
+  margin: 10px;
+}
+
+.col {
+  padding-block: 10px;
+}
+
+.col1 {
+  padding-block: 20px;
+}
+
+.star {
+  color: #15ffec;
+  width: 100%;
+}
+
+.filter {
+  margin-bottom: 50px;
+}
+
+.search-form {
+  margin-left: 40px;
+}
+
+.lis {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-center {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter {
+    border: none;
+    text-align: center;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+  }
+  .contact {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .contact-left {
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-center {
+    display: flex;
+    gap: 10px;
+  }
+  .contact {
+    display: flex;
+    gap: 20px;
   }
 }
