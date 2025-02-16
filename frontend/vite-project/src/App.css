@@ -276,6 +276,66 @@ span {
   margin-left: 20px;
 }
 
+/*! ================================ !*/
+
+.mr-4 {
+  margin-right: 40px;
+}
+
+.mr-3 {
+  margin-right: 30px;
+}
+
+.mr-2 {
+  margin-right: 20px;
+}
+
+.mr-1 {
+  margin-right: 10px;
+}
+
+.p-1 {
+  padding: 5px;
+}
+
+.py-1 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.tbody td {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: 20px;
+}
+
+.pl-2 {
+  padding-left: 20px;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.ml-2 {
+  margin-left: 20px;
+}
+
+.ml-3 {
+  margin-left: 30px;
+}
+
+.ml-4 {
+  margin-left: 40px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+/*! ================================ !*/
+
 @media screen and (max-width: 768px) {
   .footer-center {
     flex-direction: column;
