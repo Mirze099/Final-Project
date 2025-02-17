@@ -52,7 +52,8 @@ const PerPage = () => {
 };
 
 const Pagination = () => {
-  let { page, setPage, totalPages, perPage } = useContext(CryptoContext);
+  let { page, setPage, totalPages, perPage, cryptoData } =
+    useContext(CryptoContext);
 
   const TotalNumber = Math.ceil(totalPages / perPage);
 
@@ -88,89 +89,96 @@ const Pagination = () => {
     }
   };
 
-  return (
-    <div className="flex items-center">
-      <PerPage />
-      <ul className="flex items-center justify-end text-sm">
-        <li className="flex items-center">
-          <button className="outline-0 hover:text-cyan w-8" onClick={prev}>
-            <ArrowBackIosIcon />
-          </button>
-        </li>
-
-        {page + 1 === TotalNumber || page === TotalNumber ? (
-          <li>
-            {" "}
-            <button
-              onClick={multiStepPrev}
-              className="ouline-0 hover:text-cyan-400  rounded-full w-8 h-8 flex items-center justify-center text-lg    "
-            >
-              ...
+  if (cryptoData && cryptoData.length >= perPage) {
+    return (
+      <div className="flex items-center">
+        <PerPage />
+        <ul className="flex items-center justify-end text-sm">
+          <li className="flex items-center">
+            <button className="outline-0 hover:text-cyan w-8" onClick={prev}>
+              <ArrowBackIosIcon />
             </button>
           </li>
-        ) : null}
 
-        {page - 1 !== 0 ? (
-          <li>
-            <button
-              onClick={prev}
-              className="ouline-0 hover:text-cyan-400  rounded-full w-8 h-8 flex items-center justify-center bg-gray-800 mx-1.5"
-            >
+          {page + 1 === TotalNumber || page === TotalNumber ? (
+            <li>
               {" "}
-              {page - 1}{" "}
-            </button>
-          </li>
-        ) : null}
-        <li>
-          <button
-            disabled
-            className="ouline-0  rounded-full w-8 h-8 flex items-center justify-center bg-cyan-400 text-gray-300 mx-1.5"
-          >
-            {page}
-          </button>
-        </li>
+              <button
+                onClick={multiStepPrev}
+                className="ouline-0 hover:text-cyan-400  rounded-full w-8 h-8 flex items-center justify-center text-lg    "
+              >
+                ...
+              </button>
+            </li>
+          ) : null}
 
-        {page + 1 !== TotalNumber && page !== TotalNumber ? (
+          {page - 1 !== 0 ? (
+            <li>
+              <button
+                onClick={prev}
+                className="ouline-0 hover:text-cyan-400  rounded-full w-8 h-8 flex items-center justify-center bg-gray-800 mx-1.5"
+              >
+                {" "}
+                {page - 1}{" "}
+              </button>
+            </li>
+          ) : null}
           <li>
             <button
+              disabled
+              className="ouline-0  rounded-full w-8 h-8 flex items-center justify-center bg-cyan-400 text-gray-300 mx-1.5"
+            >
+              {page}
+            </button>
+          </li>
+
+          {page + 1 !== TotalNumber && page !== TotalNumber ? (
+            <li>
+              <button
+                onClick={next}
+                className="ouline-0 hover:text-cyan-400  rounded-full w-8 h-8 flex items-center justify-center bg-gray-800 mx-1.5"
+              >
+                {page + 1}
+              </button>
+            </li>
+          ) : null}
+
+          {page + 1 !== TotalNumber && page !== TotalNumber ? (
+            <li>
+              {" "}
+              <button
+                onClick={multiStepNext}
+                className="ouline-0 hover:text-cyan-400  rounded-full w-8 h-8 flex items-center justify-center text-lg    "
+              >
+                ...
+              </button>
+            </li>
+          ) : null}
+
+          {page !== TotalNumber ? (
+            <li>
+              <button
+                onClick={() => setPage(TotalNumber)}
+                className="ouline-0 hover:text-cyan-400  rounded-full w-8 h-8 flex items-center justify-center bg-gray-800 mx-1.5"
+              >
+                {TotalNumber}
+              </button>
+            </li>
+          ) : null}
+          <li>
+            <button
+              className="outline-0 hover:text-cyan-400 w-8"
               onClick={next}
-              className="ouline-0 hover:text-cyan-400  rounded-full w-8 h-8 flex items-center justify-center bg-gray-800 mx-1.5"
             >
-              {page + 1}
+              <ArrowForwardIosIcon />
             </button>
           </li>
-        ) : null}
-
-        {page + 1 !== TotalNumber && page !== TotalNumber ? (
-          <li>
-            {" "}
-            <button
-              onClick={multiStepNext}
-              className="ouline-0 hover:text-cyan-400  rounded-full w-8 h-8 flex items-center justify-center text-lg    "
-            >
-              ...
-            </button>
-          </li>
-        ) : null}
-
-        {page !== TotalNumber ? (
-          <li>
-            <button
-              onClick={() => setPage(TotalNumber)}
-              className="ouline-0 hover:text-cyan-400  rounded-full w-8 h-8 flex items-center justify-center bg-gray-800 mx-1.5"
-            >
-              {TotalNumber}
-            </button>
-          </li>
-        ) : null}
-        <li>
-          <button className="outline-0 hover:text-cyan-400 w-8" onClick={next}>
-            <ArrowForwardIosIcon />
-          </button>
-        </li>
-      </ul>
-    </div>
-  );
+        </ul>
+      </div>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default Pagination;

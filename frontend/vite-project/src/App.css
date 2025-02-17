@@ -303,6 +303,11 @@ span {
   padding-bottom: 5px;
 }
 
+.px-2 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .tbody td {
   padding: 1rem;
 }
@@ -312,6 +317,10 @@ span {
 }
 
 .pl-2 {
+  padding-left: 20px;
+}
+
+.pr-2 {
   padding-left: 20px;
 }
 
@@ -334,6 +343,20 @@ span {
 .mt-3 {
   margin-top: 30px;
 }
+
+.my-1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.element {
+  background-color: rgba(15, 27, 44, 0.728);
+}
+
+.opacity-75 {
+  opacity: 30;
+}
+
 /*! ================================ !*/
 
 @media screen and (max-width: 768px) {

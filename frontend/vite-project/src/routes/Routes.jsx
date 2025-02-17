@@ -15,6 +15,7 @@ import AdminCoin from "../pages/admin/admincoin/AdminCoin";
 import AdminDetail from "../pages/admin/admindetail/AdminDetail";
 import AddCoin from "../pages/admin/addcoin/AddCoin";
 import EditCoins from "../pages/admin/editcoins/EditCoins";
+import CryptoDetails from "../components/CryptoDetails";
 
 const ROUTES = [
   {
@@ -48,6 +49,12 @@ const ROUTES = [
       {
         path: "crypto",
         element: <Crypto />,
+        children: [
+          {
+            path: ":coinId",
+            element: <CryptoDetails />,
+          },
+        ],
       },
       {
         path: "contact",
