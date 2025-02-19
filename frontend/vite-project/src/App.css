@@ -303,6 +303,11 @@ span {
   padding-bottom: 5px;
 }
 
+.py-3 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .px-2 {
   padding-left: 10px;
   padding-right: 10px;

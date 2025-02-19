@@ -6,8 +6,7 @@ import React from "react";
 import { SignUp } from "@clerk/clerk-react";
 import Login from "../pages/user/login/Login";
 import Coin from "../pages/user/coin/Coin";
-import Trending from "../pages/user/trending/Trending";
-import Saved from "../pages/user/saved/Saved";
+// import Saved from "../pages/user/saved/Saved";
 import Crypto from "../pages/user/crypto/Crypto";
 import AdminRoot from "../pages/admin/AdminRoot";
 import Dashboard from "../pages/admin/dashboard/Dashboard";
@@ -37,14 +36,6 @@ const ROUTES = [
       {
         path: "coin",
         element: <Coin />,
-      },
-      {
-        path: "trending",
-        element: <Trending />,
-      },
-      {
-        path: "saved",
-        element: <Saved />,
       },
       {
         path: "crypto",
