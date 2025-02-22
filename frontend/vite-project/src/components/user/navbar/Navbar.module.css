@@ -5,7 +5,7 @@
   padding-block: 35px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 100%;
-  background-color: #16161a;
+  /* background-color: #16161a; */
 }
 
 .navLeft {
@@ -31,7 +31,7 @@
     font-size: 25px;
   }
   p {
-    color: white;
+    color: #bababa;
     font-weight: 1;
     font-size: 21px;
   }
@@ -62,7 +62,8 @@
 }
 
 .navNavss {
-  color: white;
+  color: #bababa;
+
   text-decoration: none;
   font-size: 14px;
   transition: 0.4s all ease;

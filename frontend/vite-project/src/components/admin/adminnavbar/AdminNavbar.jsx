@@ -1,29 +1,32 @@
 import React from "react";
 import styles from "./AdminNavbar.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { SignedOut, SignIn, UserButton } from "@clerk/clerk-react";
 
 export default function AdminNavbar() {
+  let navigate = useNavigate(-1);
   return (
     <div>
       <div className={`${styles.nav}`}>
         <div className={`${styles.navLeft}`}>
-          <p>
-            <span>VOLT</span>CRYPTO
-          </p>
+          <NavLink onClick={() => navigate(-1)} className={`${styles.navLogo}`}>
+            <p>
+              <span>VOLT</span>CRYPTO
+            </p>
+          </NavLink>
           <ul>
             <li>
-              <NavLink to={""} className={`${styles.navNav}`}>
+              <NavLink to={""} className={`${styles.navNavs}`}>
                 Dashboard
               </NavLink>
             </li>
             <li>
-              <NavLink to={"admincoin"} className={`${styles.navNav}`}>
+              <NavLink to={"admincoin"} className={`${styles.navNavs}`}>
                 Admin Coin
               </NavLink>
             </li>
             <li>
-              <NavLink to={"addcoin"} className={`${styles.navNav}`}>
+              <NavLink to={"addcoin"} className={`${styles.navNavs}`}>
                 Add Coin
               </NavLink>
             </li>

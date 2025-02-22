@@ -9,7 +9,7 @@ const clerk_key = import.meta.env.VITE_CLERK_KEY;
 console.log(clerk_key);
 
 if (!clerk_key) {
-  throw new Error("key was  not found");
+  throw new Error("Clerk API açarı tapılmadı");
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(

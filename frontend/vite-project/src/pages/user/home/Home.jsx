@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Home.module.css";
 import StarIcon from "@mui/icons-material/Star";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   return (
     <>
       <div className={`${styles.hero} container`}>
+        <Helmet>
+          <title>Home-Page</title>
+        </Helmet>
         <div className={`${styles.heroParag}`}>
           <h1>Trade Crypto Futures & Options</h1>
           <p>

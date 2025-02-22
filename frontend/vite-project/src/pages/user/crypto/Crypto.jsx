@@ -4,11 +4,15 @@ import TableComponent from "../../../components/TableComponent";
 import { Outlet } from "react-router-dom";
 import { CryptoProvider } from "../../../context/CryptoContext";
 import Filters from "../../../components/Filters";
+import { Helmet } from "react-helmet";
 
 export default function Crypto() {
   return (
     <div>
       <CryptoProvider>
+        <Helmet>
+          <title>Crypto-Page</title>
+        </Helmet>
         <main
           className="w-full h-full flex flex-col first-letter:
 content-center items-center relative text-white

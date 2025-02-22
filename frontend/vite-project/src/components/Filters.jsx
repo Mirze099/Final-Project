@@ -22,7 +22,7 @@ export default function Filters() {
   };
 
   return (
-    <div className="filter w-[80%] h-12 border-2 border-gray-100 rounded-lg flex justify-between items-center relative">
+    <div className="filter w-[80%] h-12 border-2 border-cyan-500 rounded-lg flex justify-between items-center relative">
       <Search />
       <div className="flex mr-3">
         <form
@@ -31,7 +31,7 @@ export default function Filters() {
         >
           <label
             htmlFor="currency"
-            className="relative flex justify-center items-center font-bold mr-1 text-white"
+            className="relative flex justify-center items-center font-bold mr-1 text-gray-400"
           >
             Currency:
           </label>
@@ -40,17 +40,17 @@ export default function Filters() {
             name="currency"
             ref={currencyRef}
             placeholder="usd"
-            className="w-16 rounded-lg bg-gray-800 placeholder:text-gray-100 p-1 required outline-0 border border-transparent focus:border-cyan-400 leading-4"
+            className="w-16 rounded-lg bg-gray-800 placeholder:text-gray-100 p-1 required outline-0 border border-transparent focus:border-cyan-600 leading-4"
           />
           <button type="submit">
-            <LoginIcon className="text-cyan-400 ml-1" />
+            <LoginIcon className="text-cyan-600 ml-1" />
           </button>
         </form>
         <label className="relative flex items-center justify-center">
           <span className="font-bold mr-2">sort by: </span>
           <select
             name="sortby"
-            className="bg-gray-800 text-white text-base border-none p-1 mr-2 leading-4 capitalize rounded-lg focus:outline-0"
+            className="bg-gray-800 text-gray-400 text-base border-none p-1 mr-2 leading-4 capitalize rounded-lg focus:outline-0"
             onClick={handleSort}
           >
             <option value="market_cap_desc">market cap desc</option>

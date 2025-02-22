@@ -94,7 +94,7 @@ export default function Chart({ id }) {
       <ChartComponent data={chartData} currency={currency} type={type} />
       <div className="flex">
         <button
-          className={`text-sm py-1 px-1 ml-2 bg-opacity-25 rounded capitalize ${
+          className={`text-sm scroll py-1 ml-2 bg-opacity-25 rounded capitalize ${
             type === "prices"
               ? "bg-cyan text-cyan"
               : "bg-gray-800 text-gray-100"

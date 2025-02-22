@@ -1,12 +1,10 @@
+import React from "react";
 import Contact from "../pages/user/contact/Contact";
 import Home from "../pages/user/home/Home";
 import NotFound from "../pages/user/notfound/NotFound";
 import UserRoot from "../pages/user/UserRoot";
-import React from "react";
-import { SignUp } from "@clerk/clerk-react";
 import Login from "../pages/user/login/Login";
 import Coin from "../pages/user/coin/Coin";
-// import Saved from "../pages/user/saved/Saved";
 import Crypto from "../pages/user/crypto/Crypto";
 import AdminRoot from "../pages/admin/AdminRoot";
 import Dashboard from "../pages/admin/dashboard/Dashboard";
@@ -15,6 +13,8 @@ import AdminDetail from "../pages/admin/admindetail/AdminDetail";
 import AddCoin from "../pages/admin/addcoin/AddCoin";
 import EditCoins from "../pages/admin/editcoins/EditCoins";
 import CryptoDetails from "../components/CryptoDetails";
+import Register from "../pages/user/register/Register";
+import Swap from "../pages/user/swap/Swap";
 
 const ROUTES = [
   {
@@ -31,7 +31,7 @@ const ROUTES = [
       },
       {
         path: "register",
-        element: <SignUp />,
+        element: <Register />,
       },
       {
         path: "coin",
@@ -50,6 +50,10 @@ const ROUTES = [
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "swap",
+        element: <Swap />,
       },
       {
         path: "*",

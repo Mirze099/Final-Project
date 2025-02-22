@@ -11,12 +11,22 @@
   color: #ffffff !important;
 }
 
+.light-mode .active {
+  color: #cb0000 !important;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
 }
+
 .footer {
   margin-top: 100px;
+}
+
+.admin-footer {
+  /* margin-top: 100px; */
+  background-color: white;
 }
 
 .footer-center {
@@ -44,10 +54,16 @@
   padding: 40px 20px;
   display: flex;
   justify-content: space-between;
-  background-color: #16161a;
-
   font-size: 20px;
   margin-top: 30px;
+}
+
+.admin-footer-bottom {
+  border-top: 1px solid #e0e0e0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
 }
 
 .footer-column {
@@ -58,7 +74,7 @@
 .footer-column h3 {
   font-size: 18px;
   margin-bottom: 20px;
-  color: white;
+  color: #bababa;
 }
 
 .footer-column p {
@@ -88,7 +104,7 @@
 .newsletter {
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
-  color: white;
+  color: #bababa;
 }
 
 .newsletter input[type="email"] {
@@ -175,7 +191,7 @@ span {
   margin-bottom: 20px;
   border-radius: 4px;
   font-family: inherit;
-  color: white;
+  color: #bababa;
 }
 
 .form-textarea {
@@ -185,7 +201,7 @@ span {
 
 .form-button {
   background-color: #15ffec;
-  color: white;
+  color: #bababa;
   padding: 10px 20px;
   font-size: 1em;
   border: none;
@@ -206,11 +222,19 @@ span {
   height: 100vh;
 }
 
+.mains {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
 .slider-container {
   width: 100%;
   overflow: hidden;
   background: #222;
-  color: white;
+  color: #bababa;
   padding: 10px 0;
   white-space: nowrap;
   position: relative;
@@ -278,6 +302,10 @@ span {
 
 /*! ================================ !*/
 
+.m-2 {
+  margin: 20px;
+}
+
 .mr-4 {
   margin-right: 40px;
 }
@@ -296,6 +324,10 @@ span {
 
 .p-1 {
   padding: 5px;
+}
+
+.p-2 {
+  padding: 25px;
 }
 
 .py-1 {
@@ -408,4 +440,420 @@ span {
     display: flex;
     gap: 20px;
   }
+}
+
+.customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.customers td,
+.customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.customers tr:nth-child(odd) {
+  background-color: #b7b7b7;
+}
+
+.customers tr:hover {
+  background-color: #ddd;
+}
+
+.customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: #bababa;
+}
+
+.tables {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #15ffec;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.search-inp {
+  padding: 10px;
+  border: 1px solid #15ffec;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.mainss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.mains Form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.add-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.field {
+  width: 900px;
+  padding-inline: 0.5rem;
+  padding-block: 12px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.alertt {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrivals-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  margin-top: 50px;
+  width: 300px;
+}
+
+.arrivals-img {
+  width: 100%;
+}
+
+.arrivals-img img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.arrivals-parag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.arrivals-parag h1 {
+  font-size: 25px;
+}
+
+.arrivals-parag p {
+  font-size: 20px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+:root {
+  --bg-color-dark: #16161a;
+  --text-color-dark: white;
+  --secondary-color-dark: #9999a8;
+
+  --bg-color-light: #ffffff;
+  --text-color-light: #000000;
+  --secondary-color-light: #666666;
+}
+
+.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+.light-mode {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+.heroParag h1 {
+  font-size: 60px;
+}
+
+.heroParag p {
+  font-size: 30px;
+  color: var(--secondary-color-dark);
+}
+
+.light-mode .heroParag p {
+  color: var(--secondary-color-light);
+}
+
+.btnz {
+  padding: 6px 20px;
+  border: none;
+  background-color: #15ffec;
+  font-size: 15px;
+  transition: 0.3s;
+  border-radius: 10px;
+  color: #25262b;
+}
+
+.btnz:hover {
+  background-color: #5cbf0d;
+}
+
+/* Light Mode üçün dəyişikliklər */
+/* .light-mode button {
+  background-color: #008cba;
+  color: white;
+}
+
+.light-mode button:hover {
+  background-color: #005f8a;
+} */
+
+/* Dark/Light Mode Dəyişdirmə Düyməsi */
+.themeToggle {
+  padding: 5px 15px;
+  font-size: 16px;
+  background: #008cba;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.themeToggle:hover {
+  background: #005f8a;
+}
+
+/*! SWAP !*/
+
+.tradeBox {
+  width: 500px;
+  background-color: #0e111b;
+  border: 2px solid #21273a;
+  min-height: 300px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.tradeBoxHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+}
+
+.cog {
+  color: #51586f;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.cog:hover {
+  color: white;
+  rotate: 90deg;
+}
+
+.inputs {
+  /* position: relative; */
+}
+
+.ant-input {
+  background-color: #1f2639 !important;
+  color: white !important;
+  border-width: 0px !important;
+  height: 96px !important;
+  margin-bottom: 15px;
+  font-size: 35px;
+  border-radius: 12px !important;
+  margin-top: 10px;
+}
+
+.ant-input::placeholder {
+  color: #5f6783 !important;
+}
+
+.assetOne {
+  position: absolute;
+  min-width: 50px;
+  height: 30px;
+  background-color: #3a4157;
+  top: 105px;
+  right: 40px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  font-size: 17px;
+  padding-right: 8px;
+}
+
+.assetTwo {
+  position: absolute;
+  min-width: 50px;
+  height: 30px;
+  background-color: #3a4157;
+  top: 225px;
+  right: 40px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  font-size: 17px;
+  padding-right: 8px;
+}
+
+.assetOne:hover {
+  cursor: pointer;
+}
+
+.assetTwo:hover {
+  cursor: pointer;
+}
+
+.assetLogo {
+  height: 22px;
+  margin-left: 5px;
+}
+
+.switchButton {
+  background-color: #3a4157;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 8px;
+  position: absolute;
+  top: 160px;
+  left: 220px;
+  color: #5f6783;
+  border: 3px solid #0e111b;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.switchButton:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.modalContent {
+  border-top: 1px solid #363e54;
+  /* padding-top: 20px; */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tokenChoice {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tokenChoice:hover {
+  cursor: pointer;
+  background-color: #1f2639;
+}
+
+.tokenName {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tokenTicker {
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #51596f;
+}
+
+.tokenLogo {
+  height: 40px;
+  width: 40px;
+}
+
+.swapButton {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #243056;
+  width: calc(30%);
+  height: 55px;
+  font-size: 20px;
+  border-radius: 12px;
+  color: #5981f3;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-bottom: 40px;
+}
+
+.swapButton[disabled] {
+  background-color: #243056;
+  opacity: 0.4;
+  color: #5982f39b;
+}
+
+.swapButton[disabled]:hover {
+  cursor: not-allowed;
+  background-color: #243056;
+}
+
+.swapButton:hover {
+  cursor: pointer;
+  background-color: #3b4874;
 }
